@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class RobotService {
-
     private final Robot robot;
 
     public void executeCommand(String command) {
+
         if (command == null || command.trim().isEmpty()) {
             throw new InvalidCommandException("Empty command");
         }
@@ -44,16 +44,11 @@ public class RobotService {
             int x = Integer.parseInt(placeParams[0]);
             int y = Integer.parseInt(placeParams[1]);
             Direction direction = Direction.valueOf(placeParams[2]);
-
             robot.place(x, y, direction);
         } catch (NumberFormatException e) {
             throw new InvalidCommandException("Invalid coordinates");
         } catch (IllegalArgumentException e) {
             throw new InvalidCommandException("Invalid direction");
         }
-    }
-
-    public Robot getRobot() {
-        return robot;
     }
 }

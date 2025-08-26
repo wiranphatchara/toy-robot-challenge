@@ -23,7 +23,5 @@ public class GlobalExceptionHandler {
             log.error("Invalid move: {}", exception.getMessage());
             return;
         }
-
-        log.error("System error: {}", exception.getMessage());
     }
 }

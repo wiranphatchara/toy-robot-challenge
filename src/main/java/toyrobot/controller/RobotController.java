@@ -41,7 +41,7 @@ public class RobotController implements CommandLineRunner {
                 input = input.trim();
 
                 if ("exit".equalsIgnoreCase(input)) {
-                    System.out.println("Goodbye!");
+                    System.out.println("Goodbye");
                     break;
                 }
 
