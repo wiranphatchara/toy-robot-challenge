@@ -5,6 +5,10 @@ public record Position(int x, int y) {
         return new Position(
                 x + direction.getDeltaX(),
                 y + direction.getDeltaY()
+
+                // ex. new Position(1, 1);
+                // Position newPos = current.move(Direction.NORTH);
+                // newPos will be Position(1, 2) cuz NORTH direction is (0, 1)
         );
     }
 

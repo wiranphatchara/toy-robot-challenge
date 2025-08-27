@@ -21,7 +21,7 @@ public class RobotController implements CommandLineRunner {
     private final GlobalExceptionHandler exceptionHandler;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         log.info("Starting Toy Robot Simulator ...");
 
         System.out.println("#############################################");
@@ -31,7 +31,7 @@ public class RobotController implements CommandLineRunner {
         System.out.println("#############################################");
 
         processConsoleInput();
-        log.info("Toy Robot Simulator terminated ...");
+        log.info("Toy Robot terminated ...");
     }
 
     private void processConsoleInput() {
@@ -54,7 +54,6 @@ public class RobotController implements CommandLineRunner {
             log.error("Error reading console input", e);
         }
     }
-
     private void executeCommand(String command) {
         try {
             robotService.executeCommand(command);

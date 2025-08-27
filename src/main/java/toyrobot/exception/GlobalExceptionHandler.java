@@ -23,5 +23,6 @@ public class GlobalExceptionHandler {
             log.error("Invalid move: {}", exception.getMessage());
             return;
         }
+        log.error("Error Occur: {}", exception.getMessage());
     }
 }
